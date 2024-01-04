@@ -1,0 +1,10 @@
+name: Test
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    name: Test
+    uses: SomethingPinkGmbH/.github/.github/workflows/godot-addon-gut.yml@main
+    with:
+      godot-version: 4.2.1-stable

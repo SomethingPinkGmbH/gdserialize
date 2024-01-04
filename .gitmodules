@@ -1,0 +1,10 @@
+[submodule "vendor/gut"]
+	path = vendor/gut
+	url = https://github.com/bitwes/Gut.git
+
+[submodule "vendor/gderror"]
+	path = vendor/gderror
+	url = https://github.com/SomethingPinkGmbH/gderror.git
+[submodule "vendor/gdtype"]
+	path = vendor/gdtype
+	url = https://github.com/SomethingPinkGmbH/gdtype.git
