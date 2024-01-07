@@ -10,7 +10,8 @@ enum TypeID{
 	INT,
 	OBJECT,
 	STRING,
-	UUID
+	UUID,
+	BYTES,
 }
 
 func type_id() -> TypeID:
