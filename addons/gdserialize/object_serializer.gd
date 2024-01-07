@@ -22,6 +22,7 @@ var _target_class
 var _serializable_fields: Dictionary = {}
 
 func _init(name: String, target_class, serializable_fields: Dictionary):
+	assert(name != "", "The class name cannot be empty.")
 	var test_instance: Object = target_class.new()
 	var target_class_fields = test_instance.get_property_list()
 	var field_names = []
@@ -30,9 +31,8 @@ func _init(name: String, target_class, serializable_fields: Dictionary):
 	for field in serializable_fields:
 		assert(
 			field in field_names,
-			"Field %s is declared as serializable, but is not found in the object."%field
+			"Field %s on object %s is declared as serializable, but is not found in the object."%[name,field]
 		)
-	assert(name != "", "The class name cannot be empty.")
 	_name = name
 	_serializable_fields = serializable_fields
 	_target_class = target_class
