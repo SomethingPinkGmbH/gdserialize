@@ -85,6 +85,7 @@ The following serializers are available in this library:
 | Serializer | Native data type |
 |------------|------------------|
 | [`ArraySerializer`](#arrayserializer) | `Array` |
+| [`BinarySerializer`](#binaryserializer) | `PackedByteArray` |
 | [`BoolSerializer`](#boolserializer) | `bool` |
 | [`DictionarySerializer`](#dictionaryserializer) | `Dictionary` |
 | [`EnumSerializer`](#enumserializer) | enums\* |
@@ -107,6 +108,29 @@ static var SERIALIZER = ArraySerializer.new(
 	# Pass the contained type in here.
 	StringSerializer.new()
 )
+```
+
+### `BinarySerializer`
+
+The `BinarySerializer` serializes `PackedByteArray` values into strings with a specified encoding.
+Currently, it only supports base 64 encoding. You can create it like this:
+
+```gdscript
+static var SERIALIZER = BinarySerializer.new(BinarySerializer.Base64ContentEncoder.new())
+```
+
+**Note:** You can implement your own `ContentEncoder`:
+
+```gdscript
+class YourContentEncoder extends BinarySerializer.ContentEncoder:
+	func encode(data: PackedByteArray) -> String:
+		#...
+
+	func decode(data: String) -> PackedByteArray:
+		#...
+
+	func json_schema() -> String:
+		#...
 ```
 
 ### `BoolSerializer`
