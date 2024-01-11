@@ -37,8 +37,8 @@ func get_type() -> Variant.Type:
 func serialize(_data) -> ErrorReturn:
 	for discriminator_value in discriminator_values:
 		var backing_serializer: Serializer = discriminator_values[discriminator_value]
-		if is_instance_of(_data, backing_serializer.get_class_type()):
-			var serialization_result = backing_serializer.unserialize(_data)
+		if is_instance_of(_data, backing_serializer.get_variant_type()):
+			var serialization_result = backing_serializer.serialize(_data)
 			if serialization_result.is_error():
 				return serialization_result
 			serialization_result.value[discriminator_field] = discriminator_value
