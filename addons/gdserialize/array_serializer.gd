@@ -1,5 +1,5 @@
-class_name ArraySerializer
-extends Serializer
+@tool
+class_name ArraySerializer extends Serializer
 
 var items: Serializer
 # Minimum number of items (inclusive)

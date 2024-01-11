@@ -1,3 +1,4 @@
+@tool
 class_name StringSerializer extends Serializer
 
 func get_type() -> Variant.Type:

@@ -1,3 +1,4 @@
+@tool
 class_name OptionalSerializer extends PassthruSerializer
 
 var _default_value

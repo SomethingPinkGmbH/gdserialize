@@ -1,3 +1,4 @@
+@tool
 class_name JSONSchema extends Object
 
 static func from_serializer(serializer: Serializer, id: String) -> Dictionary:

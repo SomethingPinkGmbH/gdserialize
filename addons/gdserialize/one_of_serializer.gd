@@ -1,5 +1,5 @@
-class_name OneOfSerializer
-extends Serializer
+@tool
+class_name OneOfSerializer extends Serializer
 
 var discriminator_field: String
 var passthru_discriminator: bool

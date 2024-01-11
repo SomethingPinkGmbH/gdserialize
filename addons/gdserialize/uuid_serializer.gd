@@ -1,3 +1,4 @@
+@tool
 class_name UUIDSerializer extends StringSerializer
 
 func _init():

@@ -1,3 +1,4 @@
+@tool
 class_name DictionarySerializer extends Serializer
 
 var keys: Serializer
