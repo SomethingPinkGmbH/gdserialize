@@ -1,4 +1,5 @@
 # The referenced serializer creates a reusable type in JSON schema.
+@tool
 class_name ReferencedSerializer extends PassthruSerializer
 
 var name: String

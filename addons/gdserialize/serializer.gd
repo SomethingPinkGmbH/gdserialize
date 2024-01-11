@@ -1,3 +1,4 @@
+@tool
 class_name Serializer extends RefCounted
 
 enum TypeID{

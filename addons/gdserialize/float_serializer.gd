@@ -1,3 +1,4 @@
+@tool
 class_name FloatSerializer extends Serializer
 
 static var float_re = RegEx.new()

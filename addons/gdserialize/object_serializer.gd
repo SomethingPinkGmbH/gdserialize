@@ -1,3 +1,4 @@
+@tool
 class_name ObjectSerializer extends Serializer
 
 func is_equal(a, b) -> bool:
@@ -31,7 +32,7 @@ func _init(name: String, target_class, serializable_fields: Dictionary):
 	for field in serializable_fields:
 		assert(
 			field in field_names,
-			"Field %s on object %s is declared as serializable, but is not found in the object."%[name,field]
+			"Field %s on object %s is declared as serializable, but is not found in the object."%[field,name]
 		)
 	_name = name
 	_serializable_fields = serializable_fields

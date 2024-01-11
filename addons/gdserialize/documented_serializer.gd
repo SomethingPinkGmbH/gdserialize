@@ -1,5 +1,5 @@
-class_name DocumentedSerializer
-extends PassthruSerializer
+@tool
+class_name DocumentedSerializer extends PassthruSerializer
 
 var _title: String
 var _description: String

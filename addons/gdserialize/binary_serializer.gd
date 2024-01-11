@@ -1,3 +1,4 @@
+@tool
 class_name BinarySerializer extends Serializer
 
 var contentEncoder: ContentEncoder = Base64ContentEncoder.new()

@@ -1,3 +1,4 @@
+@tool
 class_name PassthruSerializer extends Serializer
 
 var _backing_serializer: Serializer

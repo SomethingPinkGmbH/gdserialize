@@ -1,3 +1,4 @@
+@tool
 class_name BoolSerializer extends Serializer
 
 func type_id() -> TypeID:

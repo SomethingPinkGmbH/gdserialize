@@ -1,3 +1,4 @@
+@tool
 class_name EnumSerializer extends Serializer
 
 enum Method {KEY,VALUE}
