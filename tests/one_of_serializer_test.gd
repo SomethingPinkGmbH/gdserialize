@@ -33,3 +33,8 @@ func test_object_serialization():
 		return
 	assert_true(is_instance_of(unserialized.value, A))
 	assert_eq(unserialized.value.foo, "Hello world!")
+	
+	var reserialized = serializer.serialize(unserialized.value)
+	assert_false(reserialized.is_error(), str(reserialized.error))
+	assert_eq(reserialized.value["_type"], "a")
+	assert_eq(reserialized.value["foo"], "Hello world!")
