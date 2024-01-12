@@ -70,5 +70,5 @@ func test_min_max():
 	assert_error(serializer.unserialize({}), ERR_INVALID_DATA)
 	assert_no_error(serializer.serialize({1:TestData.new()}))
 	assert_no_error(serializer.serialize({1:TestData.new(),2:TestData.new(),3:TestData.new()}))
-	assert_error(serializer.unserialize({1:TestData.new(),2:TestData.new(),3:TestData.new(),4:TestData.new()}), ERR_INVALID_DATA)
+	assert_error(serializer.unserialize({1:{},2:{},3:{},4:{}}), ERR_INVALID_DATA)
 	
