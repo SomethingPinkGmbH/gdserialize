@@ -119,7 +119,12 @@ func to_jsonschema(defs: Dictionary) -> Dictionary:
 		var backing_schema = backing_serializer.to_jsonschema(defs)
 		discriminator_mappings[discriminator_value] = backing_schema["$ref"]
 		var discriminator_schema = discriminator_serializer.to_jsonschema(defs)
-		discriminator_schema["enum"] = [discriminator_value]
+		var serialized_discriminator_value = discriminator_serializer.serialize(discriminator_value)
+		assert(
+			serialized_discriminator_value.is_error() == false,
+			str(serialized_discriminator_value.error)
+		)
+		discriminator_schema["enum"] = [serialized_discriminator_value.value]
 		one_of.append({
 			"allOf": [
 				backing_schema,
