@@ -9,6 +9,7 @@ class B extends RefCounted:
 func test_object_serialization():
 	var serializer = OneOfSerializer.new(
 		"_type",
+		StringSerializer.new(),
 		false,
 		{
 			"a": ObjectSerializer.new(
